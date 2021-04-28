@@ -192,6 +192,9 @@ git fetch origin
 
 git pull = git fetch + git merge
 
+git pull origin master
+git push origin master
+
 Checkout remote branches
 git checkout -b non_tracking origin/non_tracking
 
