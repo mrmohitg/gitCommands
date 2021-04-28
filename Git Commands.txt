@@ -20,6 +20,10 @@ git branch -M main
 git remote add origin https://github.com/mrmohitg/gitCommands.git
 git push -u origin main
 
+//To set the notepad++ gives a alias name
+alias npp='notepad++.exe -multiInst -nosession'
+
+git config --global core.editor "notepad++.exe -multiInst -nosession"
 
 git help
 git help log
