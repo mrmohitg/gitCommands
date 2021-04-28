@@ -1,0 +1,190 @@
+which git
+
+git --version
+
+git config --global user.name "Mohit Gupta"
+git config --global user.email "mr.mohit.gupta.gi@gmail.com"
+
+git config --list
+git config user.name
+git config user.email
+
+git config --global color.ui true
+
+git help
+git help log
+
+git init
+git add .
+git commit -m "Initial Commit"
+
+git log
+git log -n 1
+git log --since=2017-09-16
+git log --author=="Mohit"
+git log --grep="Init"
+git log --oneline
+git log -p 3573e.. index.html
+git log --oneline --graph --all --decorate
+
+git status
+git diff first_file.txt
+git diff --staged first_file.txt
+git diff --cached
+
+Deleting the staged file:
+1. First Delete the file from working directory then
+git rm file_to_delete1.txt
+2. use direct command
+git rm file_to_delete2.txt
+
+Rename the file:
+1. First Rename the file from the working directory then
+git add last_file.txt
+git rm third_file.txt
+2. Direct Command
+git mv second_file.txt secondary_file.txt
+
+git commit -am "Changed Phone No"
+
+git mv tours/tour_detail_backpack.html tours/tour_detail_backpack_cal.html
+
+git checkout index.html
+git checkout -- index.html
+
+Undo the staged item
+git reset HEAD resources.html
+
+To Amend the changes in the previous commit
+git commit --amend -m"Done Mistake"
+
+If we need to retrieve old version
+1. Via older 'shar' values
+git checkout 701e39b3aec1b711b23e0dd20f0cf993e2a70b53 -- resources.html
+git status
+git commit -m"Revert Changes"
+2. Via revert
+git revert 701e39b3aec1b711b23e0dd20f0cf993e2a70b53
+
+soft : does not change staging index or working directory
+mixed : change staging index to match repository , but does not change working directory
+hard : changes staging index and working directory to match repository 
+
+git reset --soft 701e39b3aec1b711b23e0dd20f0cf993e2a70b53
+git diff --staged
+
+git reset --mixed 701e39b3aec1b711b23e0dd20f0cf993e2a70b53
+git diff
+
+git reset --hard 
+
+Removing Untracked Files or the files in our working directory
+git clean -n
+git clean -f
+
+Git Ignore Files
+create a .gitignore file then added in the staging index and repository.
+
+Git Ignore Already Commited Files
+git rm --cached fileName
+
+Tracking Empty Directory
+create .gitkeep file in the directory and then commit it.
+
+git ls-tree HEAD
+
+Comparing Commits
+git diff bb3bda2
+git diff bb3bda2..701e39b
+
+Branches
+git branch
+
+Create Branch
+git branch new_feature
+
+Switch Branch
+git checkout new_feature
+
+git checkout -b latest_feature
+
+Differences in different branches
+git diff new_feature ..latest_feature
+
+To Check the Branch contained all commits
+git branch
+git branch --merged
+
+To Rename Branch
+git branch -m new_feature seo_title
+
+To Delete Branch 
+git branch -d temp_beanch
+
+To Delete Branch without the safety
+git branch -D temp_beanch
+
+To Merging Code
+git merge seo_title
+
+git merge --no-ff branch_name
+git merge --ff-only branch_name
+
+To abort Merge
+git merge --abort
+
+To resolve conflicts manually
+git log --oneline -3
+git show bb3bda2
+
+git log --graph --oneline --all --decorate
+
+To save changes in Stash
+git stash save "Califirnia to Delhi"
+
+To list changes present in Stash
+git stash list
+
+To show Stash changes
+git stash show stash@{0}
+git stash show -p stash@{0}
+
+git stash pop stash@{0}
+git stash apply stash@{0}
+
+Delete Item from stash
+git stash drop stash@{0}
+git stash clear
+
+To list remote
+git remote
+
+To add new remote
+git remote add origin https://github.com/mrmohitg/mycity.git 
+
+To remove the remote 
+git remote rm origin
+
+To push code in repository
+git push -u origin master
+
+To clone a remote
+git clone https://github.com/mrmohitg/mycity.git
+
+git branch --set-upstream master origin/master
+
+To fetch and update the origin/master (For second user)
+git fetch origin
+
+git pull = git fetch + git merge
+
+Checkout remote branches
+git checkout -b non_tracking origin/non_tracking
+
+To delete a remote branch
+git push origin --delete non_tracking
+
+3 basic steps
+fetch before you work
+fetch before you push
+fetch often
