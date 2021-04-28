@@ -164,6 +164,8 @@ To resolve conflicts manually
 git log --oneline -3
 git show bb3bda2
 
+git rebase master
+
 git log --graph --oneline --all --decorate
 
 To save changes in Stash
