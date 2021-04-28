@@ -41,6 +41,12 @@ git log --oneline
 git log -p 3573e.. index.html
 git log --oneline --graph --all --decorate
 
+
+Alias
+git config --global alias.hist "log --oneline --graph --all --decorate" 
+Now we can run below command
+git hist
+
 git status
 git diff first_file.txt
 git diff --staged first_file.txt
