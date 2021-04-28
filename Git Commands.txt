@@ -63,6 +63,12 @@ git commit -am "Changed Phone No"
 
 git mv tours/tour_detail_backpack.html tours/tour_detail_backpack_cal.html
 
+To track changes in movement in file.
+git add -A
+
+To track rename in file.
+git add -U
+
 Undo the any changes
 git checkout index.html
 git checkout -- index.html
