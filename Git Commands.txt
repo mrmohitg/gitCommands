@@ -11,6 +11,16 @@ git config user.email
 
 git config --global color.ui true
 
+
+echo "# gitCommands" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mrmohitg/gitCommands.git
+git push -u origin main
+
+
 git help
 git help log
 
