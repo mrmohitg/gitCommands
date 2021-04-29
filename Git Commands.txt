@@ -189,6 +189,9 @@ git stash clear
 
 git stash -u
 
+To make changes stash and move them to new branch
+git stash brach newBranch
+
 To list remote
 git remote
 
