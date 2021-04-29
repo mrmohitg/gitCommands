@@ -166,6 +166,8 @@ git show bb3bda2
 
 git rebase master
 
+git rebase --abort
+
 git log --graph --oneline --all --decorate
 
 To save changes in Stash
@@ -184,6 +186,8 @@ git stash apply stash@{0}
 Delete Item from stash
 git stash drop stash@{0}
 git stash clear
+
+git stash -u
 
 To list remote
 git remote
