@@ -192,6 +192,39 @@ git stash -u
 To make changes stash and move them to new branch
 git stash brach newBranch
 
+To create a tag
+git tag myTag
+
+To List the tag
+git tag --list
+
+git show myTag
+
+To delete the tag
+git tag --delete myTag
+
+To create a Annotated Tag
+git tag -a v-1.0
+git show v-1.0
+
+To create a Comparing Tag
+git tag v-1.2 -m "Release 1.2"
+
+To check the difference in Tags
+git diff v-1.0 v-1.2
+
+Tagging a Commit Id
+git tag -a v-0.9-beta 907ds7
+
+To Push the tag to repository
+git push origin v-0.9-beta
+
+To Push all tags in repository
+git push origin master --tags
+
+To delete a pushed tag from repository
+git push origin :v-0.8-alpha
+
 To list remote
 git remote
 
